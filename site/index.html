@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commonplace Ventures — Applied Integration</title>
+  <meta name="description" content="A working studio for senior leaders designing organisations where intelligence — human and machine — flows.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:        #1A1A1A;
+      --paper:      #F5F1E8;
+      --blue:       #0B2545;
+      --accent:     #B5533C;
+      --mid:        #6B6456;
+      --rule:       #D9D3C7;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 18px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    /* ── Nav ── */
+
+    nav {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .wordmark {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      letter-spacing: 0.18em;
+      text-transform: lowercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .wordmark span {
+      color: var(--mid);
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-left: 0.6em;
+      font-size: 0.85rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    nav a:hover {
+      color: var(--ink);
+    }
+
+    /* ── Hero ── */
+
+    #hero {
+      padding: 7rem 0 6rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--blue);
+      margin-bottom: 2rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .lede {
+      font-size: 1.25rem;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--ink);
+      max-width: 560px;
+    }
+
+    /* ── Section headings ── */
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      color: var(--blue);
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Offer cards ── */
+
+    .offer-grid {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .offer-card {
+      border-left: 2px solid var(--accent);
+      padding-left: 1.5rem;
+    }
+
+    .offer-card .price {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-top: 0.4rem;
+    }
+
+    /* ── Pull quote ── */
+
+    blockquote {
+      border-left: 2px solid var(--blue);
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: var(--blue);
+      line-height: 1.6;
+    }
+
+    /* ── Essays list ── */
+
+    .essay-list {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .essay-list li {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .essay-list li:last-child {
+      border-bottom: none;
+    }
+
+    .essay-title {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .essay-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      white-space: nowrap;
+    }
+
+    /* ── About ── */
+
+    .dropcap::first-letter {
+      font-size: 3.8rem;
+      font-weight: 400;
+      line-height: 0.75;
+      float: left;
+      margin-right: 0.08em;
+      margin-top: 0.12em;
+      color: var(--blue);
+    }
+
+    /* ── Contact ── */
+
+    .contact-block {
+      margin-top: 2rem;
+    }
+
+    .contact-block a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.15s;
+    }
+
+    .contact-block a:hover {
+      border-color: var(--ink);
+    }
+
+    .contact-line {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: var(--mid);
+      margin-top: 0.6rem;
+    }
+
+    /* ── Footer ── */
+
+    footer {
+      padding: 3rem 0;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--mid);
+      margin: 0;
+    }
+
+    /* ── Responsive ── */
+
+    @media (max-width: 640px) {
+      h1 { font-size: 2rem; }
+      section { padding: 3.5rem 0; }
+      nav ul { gap: 1.2rem; }
+      .essay-list li { flex-direction: column; gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="/" class="wordmark">commonplace<span>ventures</span></a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#essays">Essays</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="container">
+      <p class="eyebrow">Applied integration</p>
+      <h1>Making sense of the<br><em>AI era</em> — from the inside<br>of twenty years in it.</h1>
+      <p class="lede">The world is drowning in AI frameworks, predictions, and playbooks. What it lacks is integrated judgment — the kind that comes from decades of cross-domain observation, synthesised into something senior leaders can actually use. That is what Commonplace Ventures exists to provide.</p>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work">
+    <div class="container">
+      <h2>The work</h2>
+      <p>Commonplace Ventures is a working studio for senior leaders who are redesigning their organisations for an era in which AI makes new shapes possible. The practice applies behaviour-change rigour to organisation design. Most advisors assert. This one diagnoses.</p>
+
+      <div class="offer-grid">
+        <div class="offer-card">
+          <h3>Diagnosis</h3>
+          <p>A named problem, COM-B-grade analysis, written report, and 90-minute exec readout. Two weeks. The specific thing nobody else is selling: not transformation advice, but a rigorous diagnosis of where change is stuck and why.</p>
+          <p class="price">Fixed fee — £7,500 – £10,000</p>
+        </div>
+
+        <div class="offer-card">
+          <h3>Advisory Retainer</h3>
+          <p>Two half-days per month of senior thinking partnership, plus async availability and one written artefact. For leaders who want a thinking partner in the room as implementation unfolds — not a programme vendor.</p>
+          <p class="price">£10,000 – £15,000 / month · 3-month minimum</p>
+        </div>
+
+        <div class="offer-card">
+          <h3>Intensive</h3>
+          <p>A focused session with a senior team on a specific live question. Designed, structured, and facilitated. One day in, clear thinking out.</p>
+          <p class="price">Project-scoped</p>
+        </div>
+      </div>
+
+      <blockquote>
+        "The question for senior leaders this decade is not whether to adopt AI. It's whether the organisation around the AI is the one that can actually use it."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Essays -->
+  <section id="essays">
+    <div class="container">
+      <h2>Essays</h2>
+      <p>The writing is the evidence. No case studies on demand. What follows is the accumulated observation, made available.</p>
+
+      <ul class="essay-list">
+        <li>
+          <span class="essay-title">If I Ran the Org Chart Tomorrow</span>
+          <span class="essay-tag">Forthcoming</span>
+        </li>
+        <li>
+          <span class="essay-title">Hierarchy to Intelligence — The Shape Change</span>
+          <span class="essay-tag">Forthcoming</span>
+        </li>
+        <li>
+          <span class="essay-title">Platforms Were the Rehearsal</span>
+          <span class="essay-tag">Forthcoming</span>
+        </li>
+        <li>
+          <span class="essay-title">The Pilot Graveyard — Why AI Initiatives Stall</span>
+          <span class="essay-tag">Forthcoming</span>
+        </li>
+        <li>
+          <span class="essay-title">The Multi-Agent Enterprise</span>
+          <span class="essay-tag">In progress</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+
+      <p class="dropcap">There is a tradition, older than printing, of keeping a commonplace book. A scholar's private notebook — not a diary, not a journal, but a collection: passages copied from books, observations from the field, frameworks half-formed, arguments not yet finished. Organised by theme so they could be retrieved, connected, and composed from. Montaigne kept one. Darwin kept one. John Locke designed an indexing system for his. The commonplace book was, for centuries, how a serious mind turned raw exposure into working judgment.</p>
+
+      <p>That is what this practice aims to be for the AI era.</p>
+
+      <p>The world currently has no shortage of AI content — frameworks, predictions, playbooks, benchmarks, manifestos. What it has a shortage of is <em>integrated judgment</em>: the kind that comes from twenty years of watching organisations actually change (and fail to change), drawing on organisation design, behaviour science, systems thinking, platform economics, and the emerging science of agentic systems — and composing it into something a senior leader can actually use on Monday morning.</p>
+
+      <p>Commonplace Ventures exists to be that synthesis. Our own commonplace book, built in public: what to know, what to think, what to do — to lead an organisation that is genuinely ready for an AI-driven world. Not the AI that's coming. The AI that is already here, already running in production at the organisations your peers lead — and already exposing which organisational shapes work and which ones don't.</p>
+
+      <p>The name came from a conversation about exactly this gap. We were searching for what to call two decades of cross-domain observation — and the question was: what <em>is</em> this, actually? Not what it does, but what it is. The answer arrived as a description of the commonplace book tradition. The practice dates to antiquity. The name claims the same territory: accumulated, integrated judgment, brought to bear on the specific problem in front of you.</p>
+
+      <p>AI gives access to information. A commonplace gives judgment across time — a claim no AI can yet make on its own behalf.</p>
+
+      <p>Commonplace Ventures is the working studio of <strong>Ritin Malhotra</strong>. Twenty years across technology leadership, enterprise advisory, product engineering, and organisation design. The practice draws on behaviour-change science (COM-B / BCW), systems thinking, and two decades of watching what actually happens when large organisations try to change. Solo-founded. Deliberately. Leaders engage with a person, not a pitch team.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you are a senior leader sitting with a transformation that has stalled — or one you haven't started because you don't yet know the right shape for it — a conversation costs nothing.</p>
+
+      <div class="contact-block">
+        <p><a href="mailto:ritin@commonplace.ventures">ritin@commonplace.ventures</a></p>
+        <p class="contact-line">Based in the UK. Working globally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Commonplace Ventures Ltd</p>
+      <p>Applied integration.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

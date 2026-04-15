@@ -3,32 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commonplace Ventures — Applied Integration</title>
-  <meta name="description" content="A working studio for senior leaders designing organisations where intelligence — human and machine — flows.">
+  <title>Commonplace Ventures</title>
+  <meta name="description" content="Learning by doing. 25 years of uncovering better ways of building organisations — written down.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink:        #1A1A1A;
-      --paper:      #F5F1E8;
-      --blue:       #0B2545;
-      --accent:     #B5533C;
-      --mid:        #6B6456;
-      --rule:       #D9D3C7;
+      --ink:    #1A1A1A;
+      --paper:  #F5F1E8;
+      --blue:   #0B2545;
+      --accent: #B5533C;
+      --mid:    #6B6456;
+      --rule:   #D9D3C7;
+      --cream:  #EDE8DC;
     }
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      font-size: 18px;
-      scroll-behavior: smooth;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; scroll-behavior: smooth; }
     body {
       background: var(--paper);
       color: var(--ink);
@@ -38,64 +30,26 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Layout ── */
+    .container { max-width: 680px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 5rem 0; border-bottom: 1px solid var(--rule); }
+    section:last-of-type { border-bottom: none; }
 
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    section {
-      padding: 5rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    section:last-of-type {
-      border-bottom: none;
-    }
-
-    /* ── Nav ── */
-
-    nav {
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    nav .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
+    /* Nav */
+    nav { padding: 1.8rem 0; border-bottom: 1px solid var(--rule); }
+    nav .container { display: flex; justify-content: space-between; align-items: baseline; }
     .wordmark {
-      font-family: 'Crimson Pro', Georgia, serif;
+      font-family: 'Crimson Pro', serif;
       font-weight: 300;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       letter-spacing: 0.18em;
       text-transform: lowercase;
       color: var(--ink);
       text-decoration: none;
     }
-
-    .wordmark span {
-      color: var(--mid);
-      font-style: italic;
-      font-weight: 300;
-      letter-spacing: 0.05em;
-      margin-left: 0.6em;
-      font-size: 0.85rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-
+    nav ul { list-style: none; display: flex; gap: 2rem; }
     nav a {
       font-family: 'Inter', sans-serif;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 400;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -103,118 +57,186 @@
       text-decoration: none;
       transition: color 0.15s;
     }
+    nav a:hover { color: var(--ink); }
 
-    nav a:hover {
-      color: var(--ink);
-    }
-
-    /* ── Hero ── */
-
-    #hero {
-      padding: 7rem 0 6rem;
-      border-bottom: 1px solid var(--rule);
-    }
-
+    /* Hero */
+    #hero { padding: 6rem 0 5rem; }
     .eyebrow {
       font-family: 'Inter', sans-serif;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 500;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
-
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 300;
-      line-height: 1.2;
-      letter-spacing: -0.01em;
+      line-height: 1.25;
       color: var(--blue);
-      margin-bottom: 2rem;
+      margin-bottom: 1.8rem;
     }
-
-    h1 em {
-      font-style: italic;
-      font-weight: 300;
-    }
-
+    h1 em { font-style: italic; }
     .lede {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 300;
-      line-height: 1.65;
+      line-height: 1.7;
       color: var(--ink);
       max-width: 560px;
+      margin-bottom: 1.4rem;
     }
-
-    /* ── Section headings ── */
-
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 400;
-      letter-spacing: 0.01em;
-      color: var(--blue);
-      margin-bottom: 1.5rem;
-    }
-
-    h3 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--ink);
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      margin-bottom: 1.2rem;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ── Offer cards ── */
-
-    .offer-grid {
-      display: grid;
-      gap: 2rem;
-      margin-top: 2.5rem;
-    }
-
-    .offer-card {
-      border-left: 2px solid var(--accent);
-      padding-left: 1.5rem;
-    }
-
-    .offer-card .price {
+    .manifesto-ref {
       font-family: 'Inter', sans-serif;
       font-size: 0.75rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
       color: var(--mid);
-      margin-top: 0.4rem;
-    }
-
-    /* ── Pull quote ── */
-
-    blockquote {
-      border-left: 2px solid var(--blue);
-      padding: 0.5rem 0 0.5rem 1.5rem;
-      margin: 2rem 0;
-      font-style: italic;
-      font-size: 1.15rem;
-      font-weight: 300;
-      color: var(--blue);
+      border-left: 2px solid var(--rule);
+      padding-left: 0.8rem;
       line-height: 1.6;
     }
 
-    /* ── Essays list ── */
-
-    .essay-list {
-      list-style: none;
-      margin-top: 2rem;
+    /* Commonplace book explainer */
+    #what { background: var(--blue); color: white; padding: 5rem 0; border-bottom: none; }
+    #what h2 {
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2rem;
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
     }
 
+    .notebook {
+      background: #FDFAF3;
+      border-radius: 4px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35), inset -1px 0 0 #D4C9A8;
+      overflow: hidden;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .notebook-spine {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 28px;
+      background: var(--accent);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .notebook-spine-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+    }
+
+    .notebook-pages {
+      margin-left: 28px;
+      padding: 2rem 2rem 2rem 1.6rem;
+      color: #2A2520;
+      font-family: 'Crimson Pro', serif;
+    }
+
+    .notebook-title {
+      font-size: 0.65rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8B7D6B;
+      border-bottom: 1px solid #E0D8C8;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .notebook-entry {
+      margin-bottom: 1.1rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 1px dashed #DDD5C0;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 1rem;
+      align-items: start;
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .notebook-entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .entry-domain {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding-top: 0.15rem;
+    }
+
+    .entry-text { color: #3A3028; }
+    .entry-text em { font-style: italic; color: #6B5D4F; }
+
+    .notebook-thread {
+      margin-top: 1.4rem;
+      padding-top: 1.2rem;
+      border-top: 2px solid #E0D8C8;
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      color: #7A6D5E;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .thread-arrow { color: var(--accent); font-size: 1rem; }
+
+    .explainer-caption {
+      margin-top: 2rem;
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+    }
+
+    /* Sections */
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--blue);
+      margin-bottom: 1.2rem;
+    }
+    h3 { font-size: 1rem; font-weight: 500; color: var(--ink); margin-bottom: 0.4rem; }
+    p { margin-bottom: 1.1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    blockquote {
+      border-left: 2px solid var(--accent);
+      padding: 0.4rem 0 0.4rem 1.4rem;
+      margin: 2rem 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--blue);
+      line-height: 1.65;
+    }
+    blockquote cite {
+      display: block;
+      font-style: normal;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      color: var(--mid);
+      margin-top: 0.5rem;
+    }
+
+    /* Essays */
+    .essay-list { list-style: none; margin-top: 1.8rem; }
     .essay-list li {
       padding: 1.2rem 0;
       border-bottom: 1px solid var(--rule);
@@ -223,17 +245,8 @@
       align-items: baseline;
       gap: 1rem;
     }
-
-    .essay-list li:last-child {
-      border-bottom: none;
-    }
-
-    .essay-title {
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: var(--ink);
-    }
-
+    .essay-list li:last-child { border-bottom: none; }
+    .essay-title { font-size: 1.05rem; color: var(--ink); }
     .essay-tag {
       font-family: 'Inter', sans-serif;
       font-size: 0.65rem;
@@ -243,83 +256,42 @@
       color: var(--mid);
       white-space: nowrap;
     }
+    .essay-tag.live { color: var(--accent); }
 
-    /* ── About ── */
-
-    .dropcap::first-letter {
-      font-size: 3.8rem;
-      font-weight: 400;
-      line-height: 0.75;
-      float: left;
-      margin-right: 0.08em;
-      margin-top: 0.12em;
-      color: var(--blue);
-    }
-
-    /* ── Contact ── */
-
-    .contact-block {
-      margin-top: 2rem;
-    }
-
-    .contact-block a {
+    /* Contact */
+    .contact-email {
+      font-size: 1.15rem;
       color: var(--ink);
       text-decoration: none;
       border-bottom: 1px solid var(--rule);
       transition: border-color 0.15s;
+      margin-top: 1.5rem;
+      display: inline-block;
     }
+    .contact-email:hover { border-color: var(--ink); }
 
-    .contact-block a:hover {
-      border-color: var(--ink);
-    }
+    /* Footer */
+    footer { padding: 2.5rem 0; }
+    footer .container { display: flex; justify-content: space-between; align-items: center; }
+    footer p { font-family: 'Inter', sans-serif; font-size: 0.68rem; color: var(--mid); margin: 0; }
 
-    .contact-line {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.85rem;
-      color: var(--mid);
-      margin-top: 0.6rem;
-    }
-
-    /* ── Footer ── */
-
-    footer {
-      padding: 3rem 0;
-    }
-
-    footer .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    footer p {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      color: var(--mid);
-      margin: 0;
-    }
-
-    /* ── Responsive ── */
-
-    @media (max-width: 640px) {
-      h1 { font-size: 2rem; }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.9rem; }
       section { padding: 3.5rem 0; }
+      .notebook-entry { grid-template-columns: 1fr; gap: 0.2rem; }
+      .entry-domain { padding-top: 0; }
       nav ul { gap: 1.2rem; }
-      .essay-list li { flex-direction: column; gap: 0.3rem; }
+      footer .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
     <div class="container">
-      <a href="/" class="wordmark">commonplace<span>ventures</span></a>
+      <a href="/" class="wordmark">commonplace</a>
       <ul>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#essays">Essays</a></li>
+        <li><a href="#writing">Writing</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -329,94 +301,89 @@
   <!-- Hero -->
   <section id="hero">
     <div class="container">
-      <p class="eyebrow">Think it. Build it.</p>
-      <h1>Making sense of the<br><em>AI era</em> — then doing<br>something about it.</h1>
-      <p class="lede">Commonplace Ventures brings together two things that are usually sold separately: the judgment to know what your organisation needs to become, and the capability to help you build it. We work on the idea side and the delivery side — because knowing what to do and actually doing it are the same problem.</p>
+      <p class="eyebrow">Learning by doing</p>
+      <h1>25 years of seeing what<br>good looks like — <em>written down.</em></h1>
+      <p class="lede">Since the Agile Manifesto was signed in 2001, a generation of practitioners has been uncovering better ways of building software — and the organisations around it. This is one practitioner's notebook from that journey.</p>
+      <p class="manifesto-ref">
+        "We are uncovering better ways of developing software by doing it and helping others do it."<br>
+        — Agile Manifesto, 2001
+      </p>
     </div>
   </section>
 
-  <!-- Work -->
-  <section id="work">
+  <!-- What is a commonplace book -->
+  <section id="what">
     <div class="container">
-      <h2>The work</h2>
-      <p>Most practices choose a lane: strategy or execution, thinking or doing, advisory or delivery. Commonplace Ventures sits at the intersection — because the gap between insight and implementation is where most organisations lose the most value.</p>
+      <h2>What is a commonplace book?</h2>
 
-      <p>We work across two modes, often in the same engagement:</p>
-
-      <div class="offer-grid" style="margin-top: 2rem; margin-bottom: 2.5rem;">
-
-        <div class="offer-card" style="border-color: var(--blue);">
-          <h3>Think — the idea and strategy side</h3>
-          <p>Diagnosis of where your organisation is misshapen for the intelligence era. Naming the specific problem. Understanding the behavioural and structural mechanisms that are holding it in place. Writing the report that gives your senior team a shared picture of what needs to change and why.</p>
-          <p>This is the work of integrated judgment — accumulated observation across two decades, applied to your specific situation.</p>
+      <div class="notebook">
+        <div class="notebook-spine">
+          <div class="notebook-spine-dot"></div>
+          <div class="notebook-spine-dot"></div>
+          <div class="notebook-spine-dot"></div>
+          <div class="notebook-spine-dot"></div>
+          <div class="notebook-spine-dot"></div>
         </div>
+        <div class="notebook-pages">
+          <div class="notebook-title">Commonplace Book — observations, patterns, questions</div>
 
-        <div class="offer-card" style="border-color: var(--accent);">
-          <h3>Build — the delivery and do side</h3>
-          <p>Turning the diagnosis into motion. Designing the new operating model. Building the AI-era products and capabilities that your organisation needs. Hands-on delivery alongside your teams — not steering committees, but actual work.</p>
-          <p>This is where the thinking becomes real: prototypes, platforms, changed ways of working, capabilities your teams can own.</p>
-        </div>
+          <div class="notebook-entry">
+            <span class="entry-domain">Org design</span>
+            <span class="entry-text">When teams own outcomes end-to-end, coordination tax drops by half. The org structure <em>is</em> the architecture.</span>
+          </div>
 
-      </div>
+          <div class="notebook-entry">
+            <span class="entry-domain">Behaviour science</span>
+            <span class="entry-text">Most "resistance to change" is not resistance — it's a capability gap dressed up as reluctance. COM-B: check opportunity before blaming motivation.</span>
+          </div>
 
-      <p>The two modes reinforce each other. Strategy without delivery stays on slides. Delivery without strategy builds the wrong things. Commonplace Ventures brings both — as a thinking partner, a diagnostic practitioner, and a hands-on builder.</p>
+          <div class="notebook-entry">
+            <span class="entry-domain">AI in orgs</span>
+            <span class="entry-text">Organisations bolting AI onto a 1995-shaped structure get 1995-shaped results. The shape has to change first.</span>
+          </div>
 
-      <h3 style="margin-top: 2.5rem; margin-bottom: 1.5rem; color: var(--mid); font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;">Engagement shapes</h3>
+          <div class="notebook-entry">
+            <span class="entry-domain">Platform thinking</span>
+            <span class="entry-text">Platforms built before there are products to run on them become expensive shelfware. The product teaches the platform what to be.</span>
+          </div>
 
-      <div class="offer-grid">
-        <div class="offer-card">
-          <h3>Diagnosis</h3>
-          <p>A named problem, COM-B-grade analysis, written report, and 90-minute exec readout. Two weeks. The specific thing nobody else is selling: not transformation advice, but a rigorous diagnosis of where change is stuck and why — and what it will take to move.</p>
-          <p class="price">Fixed fee — £7,500 – £10,000</p>
-        </div>
-
-        <div class="offer-card">
-          <h3>Advisory Retainer</h3>
-          <p>Two half-days per month of senior thinking partnership, plus async availability and one written artefact. For leaders who want a thinking partner in the room as implementation unfolds — someone who works across the idea and the delivery, not just one.</p>
-          <p class="price">£10,000 – £15,000 / month · 3-month minimum</p>
-        </div>
-
-        <div class="offer-card">
-          <h3>Build Engagement</h3>
-          <p>Hands-on delivery of a specific AI-era capability — a new operating model, a product, a platform, an agentic workflow. Scoped, staffed, delivered. We design it and we build it.</p>
-          <p class="price">Project-scoped</p>
-        </div>
-
-        <div class="offer-card">
-          <h3>Intensive</h3>
-          <p>A focused session with a senior team on a specific live question. One day in, clear thinking and a concrete next step out.</p>
-          <p class="price">Day rate</p>
+          <div class="notebook-thread">
+            <span class="thread-arrow">→</span>
+            <span>These entries connect. That's the point. A commonplace book is how a mind turns exposure into judgment.</span>
+          </div>
         </div>
       </div>
+
+      <p class="explainer-caption">Scholars, scientists and writers have kept commonplace books since antiquity — personal notebooks collecting observations from many domains, organised so they can be retrieved, connected, and composed from. Montaigne kept one. Darwin kept one. This is ours.</p>
+    </div>
+  </section>
+
+  <!-- Writing -->
+  <section id="writing">
+    <div class="container">
+      <h2>Writing</h2>
+      <p>The writing comes from the work. Each piece starts as a pattern noticed in the field — something that keeps appearing across different organisations, different decades, different contexts. The essay is the attempt to name it precisely enough to be useful.</p>
 
       <blockquote>
-        "The question for senior leaders this decade is not whether to adopt AI. It's whether the organisation around the AI is the one that can actually use it — and whether anyone is going to help them build that organisation, not just describe it."
+        "The question for senior leaders this decade is not whether to adopt AI. It's whether the organisation around the AI is the one that can actually use it."
       </blockquote>
-    </div>
-  </section>
-
-  <!-- Essays -->
-  <section id="essays">
-    <div class="container">
-      <h2>Essays</h2>
-      <p>The writing is the evidence. No case studies on demand. What follows is the accumulated observation, made available.</p>
 
       <ul class="essay-list">
         <li>
           <span class="essay-title">If I Ran the Org Chart Tomorrow</span>
-          <span class="essay-tag">Forthcoming</span>
+          <span class="essay-tag">Coming soon</span>
         </li>
         <li>
           <span class="essay-title">Hierarchy to Intelligence — The Shape Change</span>
-          <span class="essay-tag">Forthcoming</span>
+          <span class="essay-tag">Coming soon</span>
         </li>
         <li>
           <span class="essay-title">Platforms Were the Rehearsal</span>
-          <span class="essay-tag">Forthcoming</span>
+          <span class="essay-tag">Coming soon</span>
         </li>
         <li>
-          <span class="essay-title">The Pilot Graveyard — Why AI Initiatives Stall</span>
-          <span class="essay-tag">Forthcoming</span>
+          <span class="essay-title">The Pilot Graveyard</span>
+          <span class="essay-tag">Coming soon</span>
         </li>
         <li>
           <span class="essay-title">The Multi-Agent Enterprise</span>
@@ -431,42 +398,18 @@
     <div class="container">
       <h2>About</h2>
 
-      <h3 style="color: var(--blue); font-weight: 400; font-size: 1rem; margin-bottom: 1rem; font-family: 'Crimson Pro', serif; font-style: italic; font-size: 1.15rem;">The name</h3>
+      <p>The Agile Manifesto was written in February 2001 by seventeen practitioners who had spent years in the field, watching what worked and what didn't. They didn't start with a theory. They started with observations — from doing the work and helping others do it.</p>
 
-      <p>A commonplace book is a scholar's private notebook — not a diary, but a collection. Passages from books. Observations from the field. Frameworks half-formed, arguments not yet finished. Organised by theme so they can be retrieved, connected, and composed from.</p>
+      <p>Commonplace Ventures is in that tradition. Twenty-five years of observation across software delivery, product development, organisation design, and now the AI era — collected, connected, and made available.</p>
 
-      <p>Montaigne kept one. Darwin kept one. John Locke designed an indexing system for his. For centuries, it was how a serious mind turned raw exposure into working judgment.</p>
+      <p>Not a framework. Not a methodology. A notebook, shared.</p>
 
-      <p>That is what this practice aims to be — for the AI era.</p>
+      <blockquote>
+        "We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value individuals and interactions over processes and tools."
+        <cite>— Agile Manifesto, 2001</cite>
+      </blockquote>
 
-      <h3 style="color: var(--blue); font-weight: 400; font-size: 1rem; margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Crimson Pro', serif; font-style: italic; font-size: 1.15rem;">The gap we fill</h3>
-
-      <p>The world has no shortage of AI content — frameworks, predictions, playbooks, benchmarks, manifestos. What it has a shortage of is <em>integrated judgment</em>.</p>
-
-      <p>The kind that comes from two decades of cross-domain observation, synthesised into something a senior leader can actually use on Monday morning. Drawing on:</p>
-
-      <ul style="margin: 1.2rem 0 1.2rem 1.2rem; line-height: 2; color: var(--ink);">
-        <li>Organisation design and operating model thinking</li>
-        <li>Behaviour change science (COM-B / BCW)</li>
-        <li>Systems thinking and platform economics</li>
-        <li>The emerging science of agentic systems</li>
-        <li>Twenty years of watching what actually happens when large organisations try to change</li>
-      </ul>
-
-      <p>AI gives access to information. A commonplace gives judgment across time — a claim no AI can yet make on its own behalf.</p>
-
-      <h3 style="color: var(--blue); font-weight: 400; font-size: 1rem; margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Crimson Pro', serif; font-style: italic; font-size: 1.15rem;">How we work</h3>
-
-      <p>Commonplace Ventures is a working studio — solo-founded, deliberately. Leaders engage with a person, not a pitch team.</p>
-
-      <p>We work across two modes:</p>
-
-      <ul style="margin: 1.2rem 0 1.2rem 1.2rem; line-height: 2; color: var(--ink);">
-        <li><strong>Think</strong> — diagnosis, strategy, frameworks, written analysis. The judgment side.</li>
-        <li><strong>Build</strong> — hands-on delivery alongside your teams. The doing side.</li>
-      </ul>
-
-      <p>Most practices choose one. The gap between the two is where most organisations lose most of their value.</p>
+      <p>The same sentence, updated for now: <em>We are uncovering better ways of building organisations by doing it and helping others do it.</em></p>
 
     </div>
   </section>
@@ -475,20 +418,15 @@
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <p>If you are a senior leader sitting with a transformation that has stalled — or one you haven't started because you don't yet know the right shape for it — a conversation costs nothing.</p>
-
-      <div class="contact-block">
-        <p><a href="mailto:ritin@commonplace.ventures">ritin@commonplace.ventures</a></p>
-        <p class="contact-line">Based in the UK. Working globally.</p>
-      </div>
+      <p>If something here resonates — or if you're sitting with an organisational question you haven't been able to name yet — get in touch.</p>
+      <a class="contact-email" href="mailto:ritin@commonplace.ventures">ritin@commonplace.ventures</a>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2026 Commonplace Ventures Ltd</p>
-      <p>Applied integration.</p>
+      <p>© 2026 Commonplace Ventures</p>
+      <p>Learning by doing.</p>
     </div>
   </footer>
 
